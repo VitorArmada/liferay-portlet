@@ -1,0 +1,111 @@
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+        "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+
+<urlrewrite>
+
+	<!--
+	
+    <rule>
+        <note>
+            The rule means that requests to /test/status/ will be redirected to /rewrite-status
+            the url will be rewritten.
+        </note>
+        <from>/test/status/</from>
+        <to type="redirect">%{context-path}/rewrite-status</to>
+    </rule>
+    
+    <rule>
+        <note>tutoriais</note>
+        <from>/tutoriais</from>
+        <to type="permanent-redirect">%{context-path}/noticias</to>
+    </rule>
+    <rule>
+        <note>incoming</note>
+        <from>/incoming</from>
+        <to type="permanent-redirect">%{context-path}/home</to>
+    </rule>
+    <rule>
+        <note>az/[A-Z]</note>
+        <from>/az/[a-z]</from>
+        <to type="permanent-redirect">%{context-path}/noticias</to>
+    </rule>
+    
+    <rule>
+        <note>comentario-do-dia</note>
+        <from>/comentario-do-dia</from>
+        <to type="permanent-redirect">%{context-path}/noticias</to>
+    </rule>
+    <rule>
+        <note>comunicados-de-imprensa</note>
+        <from>/comunicados-de-imprensa</from>
+        <to type="permanent-redirect">%{context-path}/noticias</to>
+    </rule>
+    <rule>
+        <note>news</note>
+        <from>/news</from>
+        <to type="permanent-redirect">%{context-path}/noticias</to>
+    </rule>
+    <rule>
+        <note>diversao/erro-de-sistema</note>
+        <from>/diversao/erro-de-sistema</from>
+        <to type="permanent-redirect">%{context-path}/noticias</to>
+    </rule>
+    <rule>
+        <note>diversao/passatempos</note>
+        <from>/diversao/passatempos</from>
+        <to type="permanent-redirect">%{context-path}/noticias</to>
+    </rule>
+    <rule>
+        <note>diversao/jogos-classicos</note>
+        <from>/diversao/jogos-classicos</from>
+        <to type="permanent-redirect">%{context-path}/noticias</to>
+    </rule>
+    <rule>
+        <note>downloads/internet</note>
+        <from>/downloads/internet</from>
+        <to type="permanent-redirect">%{context-path}/noticias</to>
+    </rule>
+    <rule>
+        <note>downloads/jogos</note>
+        <from>/downloads/jogos</from>
+        <to type="permanent-redirect">%{context-path}/noticias</to>
+    </rule>
+    <rule>
+        <note>downloads/programas</note>
+        <from>/downloads/programas</from>
+        <to type="permanent-redirect">%{context-path}/noticias</to>
+    </rule>
+    <rule>
+        <note>downloads/utilitarios</note>
+        <from>/downloads/utilitarios</from>
+        <to type="permanent-redirect">%{context-path}/noticias</to>
+    </rule>
+    <rule>
+        <note>especiais</note>
+        <from>/especiais</from>
+        <to type="permanent-redirect">%{context-path}/noticias</to>
+    </rule>
+    <rule>
+        <note>teste/componentes</note>
+        <from>/teste/componentes</from>
+        <to type="permanent-redirect">%{context-path}/noticias</to>
+    </rule>
+    <rule>
+        <note>testes/grupo</note>
+        <from>/testes/grupo</from>
+        <to type="permanent-redirect">%{context-path}/noticias</to>
+    </rule>
+    <rule>
+        <note>testes/componentes</note>
+        <from>/testes/componentes</from>
+        <to type="permanent-redirect">%{context-path}/noticias</to>
+    </rule>
+    <rule>
+        <note>jogos</note>
+        <from>/jogos/(.*)</from>
+        <to type="permanent-redirect">/noticias/jogos/$1</to>
+    </rule>
+		
+	-->
+
+</urlrewrite>

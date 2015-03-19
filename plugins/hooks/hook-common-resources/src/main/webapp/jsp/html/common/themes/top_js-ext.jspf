@@ -1,0 +1,57 @@
+<%@page import="java.util.List"%>
+<%@page import="com.liferay.portal.theme.ThemeDisplay"%>
+<%@page import="com.liferay.portal.model.Group"%>
+<%@page import="com.liferay.portal.kernel.util.HtmlUtil"%>
+<%@page import="com.liferay.portal.util.PortalUtil"%>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/headjs/0.99/head.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="//vjs.zencdn.net/4.0/video.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/slidesjs/3.0/jquery.slides.min.js"></script>
+<script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
+<script type="text/javascript" src="http://js.sapo.pt/SAPOWebAnalytics/"></script>
+<script type="text/javascript" src="<%= HtmlUtil.escape(PortalUtil.getStaticResourceURL(request, themeDisplay.getCDNDynamicResourcesHost() + themeDisplay.getPathJavaScript() + "/impresajs.jsp", "minifierBundleId=javascript.impresajs.files", javaScriptLastModified)) %>" ></script>
+<%--
+Temporariamente suspenso ate perceber porque raio o head js nao carrega o impresajs como deve ser
+<script type="text/javascript">
+	head.js('//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js', function(){
+		head.js('//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js',
+				'//vjs.zencdn.net/4.0/video.js',
+				'//cdnjs.cloudflare.com/ajax/libs/slidesjs/3.0/jquery.slides.min.js',
+				'http://www.google-analytics.com/ga.js',
+				'http://js.sapo.pt/SAPOWebAnalytics/', function() {
+			head.js('<%= HtmlUtil.escape(PortalUtil.getStaticResourceURL(request, themeDisplay.getCDNDynamicResourcesHost() + themeDisplay.getPathJavaScript() + "/impresajs.jsp", "minifierBundleId=javascript.impresajs.files", javaScriptLastModified)) %>');
+		});
+	});
+</script>
+--%>
+<%-- Google AdSense (Relies on Custom Fields) --%>
+<%
+	String googleAdSenseId = (String) group.getExpandoBridge().getAttribute("googleAdSenseId");
+	if(googleAdSenseId != null && !googleAdSenseId.isEmpty()) {
+		
+		String googleAdSenseFormats = (String) group.getExpandoBridge().getAttribute("googleAdSenseFormats");
+		if( googleAdSenseFormats != null && !googleAdSenseFormats.isEmpty() ) {
+		%>	
+			<script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
+			<script type="text/javascript">
+				GS_googleAddAdSenseService("<%=googleAdSenseId %>");
+				GS_googleEnableAllServices();
+			</script>
+			<script type='text/javascript'>
+			<%
+				for( String format : googleAdSenseFormats.split(",") ) {
+				%>
+					GA_googleAddSlot("<%=googleAdSenseId%>", "<%=format%>");
+				<%
+				}
+			%>
+			</script>
+			<script type='text/javascript'>
+				GA_googleFetchAds();
+			</script>
+			<%
+		}
+	}
+%>

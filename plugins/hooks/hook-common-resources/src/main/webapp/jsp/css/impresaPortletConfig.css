@@ -1,0 +1,57 @@
+/* 
+    Document   : impresaPortletsConfig
+    Created on : 4/Mar/2013, 12:27:00
+    Author     : pedropinto
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.widgetInfo { font:normal 11px Arial, Helvetica, sans-serif; color:#333; background:#FAFAFA; border-radius:5px; padding:5px 0; margin:-30px 0 15px 0; float:left; }
+.widgetInfo .widgetName { font-weight:bold; padding:0 15px; border-right:solid 1px #aaa; text-transform:uppercase; float:left; }
+.widgetInfo .jenkinsBuild { padding:0 15px; float:left; color:#555; }
+.widgetInfo .jenkinsBuild span { font-weight:bold; }
+
+/* CONFIG STYLES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#configTabs { margin:0 0 20px 0; min-width:780px; border-radius:0px; position:relative; }
+/*wikiButton*/
+#configTabs .wikiButton { position:absolute; top:5px; right:0; }
+#configTabs .wikiButton a { font:bold 11px Arial, Helvetica, sans-serif; color:#fff; text-transform:uppercase; padding:3px 15px; background:#00adef; border-radius:2px; }
+#configTabs .wikiButton a:hover { text-decoration:none; }
+
+/*tabs*/
+#configTabs > ul { border-radius:0px; border:none; padding:0; margin:0 0 -1px 0; overflow:hidden; }
+#configTabs > ul li { list-style:none; margin:0 -1px 0 0; float:left; background:#fafafa; border:solid 1px #aaa; border-bottom:none; position:relative; top:4px; }
+#configTabs > ul li a { padding:5px 15px; font:bold 11px/15px Arial, Helvetica, sans-serif; color:#333; text-transform:uppercase; display:block; text-decoration:none; }
+#configTabs > ul li.ui-state-hover { background:#eee; }
+#configTabs > ul li.ui-tabs-active { background:#fff; border-bottom:solid 1px #fff; top:0; border-radius:2px 2px 0 0; z-index:110; box-shadow:0 10px 20px -5px #000; }
+#configTabs > ul li.ui-tabs-active a { /*padding:5px 20px;*/ line-height:19px; }
+#configTabs > ul li a:focus { outline:none !important; }
+#configTabs .ui-tabs-panel { border-top:solid 1px #aaa; padding:20px 20px 30px 20px; border:solid 1px #aaa; position:relative; z-index:100; }
+/*containers*/
+#configTabs .configContainer { padding:0; margin:0; clear:both; min-height:20px; border-bottom:solid 1px #ddd; overflow:hidden; }
+#configTabs .configContainer:nth-child(even) { background:#fafafa; }
+#configTabs .configContainer > div.first { box-shadow:20px 0 50px -10px #ddd; padding:5px 15px; } 
+#configTabs .configContainer > div.last { padding:5px 15px; }
+#configTabs .configContainer hr { height:0px; margin:0 0 7px 0; border:none; border-bottom:dotted 1px #eee; }
+/*form*/
+#configTabs input,
+#configTabs textarea,
+#configTabs select { font:bold 11px Arial, Helvetica, sans-serif; color:#05A; margin:0 5px 5px 0; background:#fff !important; padding:2px 2px 2px 3px !important; border:solid 1px #aaa !important; border-radius:2px; }
+#configTabs input[type*="checkbox"] { position:relative; top:2px; border:none !important; }
+#configTabs .inputShortestSize { width:25px; }
+#configTabs .inputShortSize { width:60px; }
+#configTabs .inputMediumSize { width:150px; }
+#configTabs .inputLongSize { width:300px; }
+#configTabs .inputLongestSize { width:500px; }
+#configTabs label { font:normal 11px/20px Arial, Helvetica, sans-serif; color:#222; margin:0; }
+#configTabs .first label { font-weight:bold; }
+#configTabs label.displayAsBlock { display:block; }
+#configTabs a.externalLink { font:italic normal 11px/20px Arial, Helvetica, sans-serif; color:#00adef; margin:0; text-transform:lowercase; display:block; }
+/**/
+#configTabs .configContainer.hideConfigDiv > div.last { height:0; padding:0 15px;/* height:auto;*/ }
+#configTabs .configContainer.showConfigDiv > div.last { height:auto; }
+/**/
+#configTabs input.saveForm { padding:5px 25px !important; margin:15px 15px 0 15px; font:bold 12px Arial, Helvetica, sans-serif; color:#fff !important; text-transform:uppercase; background:#333 !important; border:none !important; text-shadow:none; }
+/* /CONFIG STYLES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+

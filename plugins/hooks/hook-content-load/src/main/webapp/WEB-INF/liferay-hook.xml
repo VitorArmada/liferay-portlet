@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hook PUBLIC "-//Liferay//DTD Hook 6.1.0//EN" "http://www.liferay.com/dtd/liferay-hook_6_1_0.dtd">
+
+<hook>
+    <servlet-filter>
+		<servlet-filter-name>Content Load</servlet-filter-name>
+		<servlet-filter-impl>pt.impresa.liferay.content.filters.ContentLoadFilter</servlet-filter-impl>
+	</servlet-filter>
+    
+    <servlet-filter-mapping>
+		<servlet-filter-name>Content Load</servlet-filter-name>
+		<after-filter>Legacy URL Redirect</after-filter>
+		<url-pattern>/web/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</servlet-filter-mapping>
+</hook>

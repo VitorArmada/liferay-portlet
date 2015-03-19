@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!-- The contents of this file will be loaded for each web application -->
+<Context>
+
+    <!-- Default set of monitored resources -->
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+
+    <!-- Uncomment this to disable session persistence across Tomcat restarts -->
+    <!--
+    <Manager pathname="" />
+    -->
+
+    <!-- Uncomment this to enable Comet connection tacking (provides events
+         on session expiration as well as webapp lifecycle) -->
+    <!--
+    <Valve className="org.apache.catalina.valves.CometConnectionManagerValve" />
+    -->
+	<Environment name="service/content/url" value="https://services.impresa.pt/ExameInformatica/Content/Request?wsdl=1&amp;ESBToken=27d1b97305187d63028d8bf4983bb2bd8d90b30cffd51a31cee0c60b3b8fec85b38f33b658b26c72598ef9f73e61a66da118ded9e3610353791b14a62e5a9b1c45f2a156a5d7aa3173f24a19c7529b2ac54f5280c7ffc241590571291fc877195e69e70cac7333cc5838c3c2b063a909f0577b50ffa123a30f17c967ff44f1e6c48eccab12ab017a579e09727f971fbc2b93725be95dc9779e253b4c83c8a8489bc850909c3c9877a097f5cd6b786da97e54ae5b7ab409a659568d6f3182612783280f64faf5567e65994fd9e759914d5c8305855d9ac2fd3bbfd997a6d11db3b3c99453513da02a791719606f72ddbde8ab33b14d0499bb4c75563c4416b50f" type="java.lang.String" override="false"/>	
+	<Environment name="service/content/filters" value="pt.impresa.soap.client.SAPOClientFilter" type="java.lang.String" override="false"/>
+	<Environment name="service/content/sdb/token" value="27d1b97305187d63028d8bf4983bb2bd8d90b30cffd51a31cee0c60b3b8fec85b38f33b658b26c72598ef9f73e61a66da118ded9e3610353791b14a62e5a9b1c45f2a156a5d7aa3173f24a19c7529b2ac54f5280c7ffc241590571291fc877195e69e70cac7333cc5838c3c2b063a909f0577b50ffa123a30f17c967ff44f1e6c48eccab12ab017a579e09727f971fbc2b93725be95dc9779e253b4c83c8a8489bc850909c3c9877a097f5cd6b786da97e54ae5b7ab409a659568d6f3182612783280f64faf5567e65994fd9e759914d5c8305855d9ac2fd3bbfd997a6d11db3b3c99453513da02a791719606f72ddbde8ab33b14d0499bb4c75563c4416b50f" type="java.lang.String" override="false"/>
+	<Environment name="service/content/sdb/soapAction" value="https://services.impresa.pt/ExameInformatica/Content/Request" type="java.lang.String" override="false"/>
+</Context>

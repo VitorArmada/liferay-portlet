@@ -1,0 +1,141 @@
+#
+# Themes, Layouts, and Javascripts
+#
+
+#changed
+theme.css.fast.load=false
+theme.portlet.decorate.default=false
+theme.images.fast.load=false
+
+javascript.barebone.enabled=true
+javascript.fast.load=true
+javascript.log.enabled=false
+javascript.bundle.ids=\
+       javascript.barebone.files,\
+       javascript.everything.files,\
+       javascript.impresajs.files
+javascript.impresajs.files=\
+        lib/clickheat.js,\
+        lib/jquery.autoellipsis.js,\
+        lib/jquery.cookie.js,\
+        lib/jquery.infinitescroll.min.js,\
+        lib/jquery.infinitescroll.behavior.manual-trigger.js,\
+        lib/jquery.infinitescroll.behavior.local.js,\
+        lib/jquery.infinitescroll.behavior.facebook.js,\
+        lib/jquery.masonry.min.js,\
+        lib/jquery.mCustomScrollbar.concat.min.js,\
+        lib/netscope.js,\
+        impresa/portal-common.js,\
+        impresa/analytics/analytics.js,\
+        impresa/layout/layout-tabs.js,\
+        impresa/portlet/portlet-common.js,\
+        impresa/socialnetworks/socialnetworks.js,\
+        impresa/video/telefunken.js,\
+        impresa/video/telefunken-util.js,\
+        impresa/video/telefunken-videojs.js,\
+        impresa/video/telefunken-vast.js
+javascript.bundle.dir[javascript.impresajs.files]=/html/js
+
+layout.parallel.render.enable=true
+#changed
+layout.template.cache.enabled=false 
+#added
+minifier.enabled=false
+
+#
+# Toggle and untoggle Filters
+#
+
+com.liferay.portal.servlet.filters.autologin.AutoLoginFilter=false
+com.liferay.portal.servlet.filters.sso.cas.CASFilter=false
+com.liferay.portal.servlet.filters.i18n.I18nFilter=false
+com.liferay.portal.servlet.filters.sso.ntlm.NtlmFilter=false
+com.liferay.portal.servlet.filters.sso.ntlm.NtlmPostFilter=false
+com.liferay.portal.servlet.filters.sso.opensso.OpenSSOFilter=false
+com.liferay.portal.sharepoint.SharepointFilter=false
+#changed
+com.liferay.portal.servlet.filters.strip.StripFilter=false
+#changed
+com.liferay.portal.servlet.filters.cache.CacheFilter=false
+#changed
+com.liferay.portal.servlet.filters.compression.CompressionFilter=false
+#changed
+com.liferay.portal.servlet.filters.layoutcache.LayoutCacheFilter=false
+com.liferay.portal.servlet.filters.etag.ETagFilter=false
+com.liferay.portal.servlet.filters.header.HeaderFilter=false
+com.liferay.portal.servlet.filters.themepreview.ThemePreviewFilter=true
+com.liferay.portal.servlet.filters.validhtml.ValidHtmlFilter=true
+
+#
+# Other parameters
+#
+
+spring.configs=\
+    META-INF/base-spring.xml,\
+    \
+    META-INF/hibernate-spring.xml,\
+    META-INF/infrastructure-spring.xml,\
+    META-INF/management-spring.xml,\
+    \
+    META-INF/util-spring.xml,\
+    \
+    META-INF/jpa-spring.xml,\
+    \
+    META-INF/executor-spring.xml,\
+    \
+    META-INF/audit-spring.xml,\
+    META-INF/cluster-spring.xml,\
+    META-INF/editor-spring.xml,\
+    META-INF/jcr-spring.xml,\
+    META-INF/ldap-spring.xml,\
+    META-INF/messaging-core-spring.xml,\
+    META-INF/messaging-misc-spring.xml,\
+    META-INF/mobile-device-spring.xml,\
+    META-INF/notifications-spring.xml,\
+    META-INF/poller-spring.xml,\
+    META-INF/rules-spring.xml,\
+    META-INF/scheduler-spring.xml,\
+    META-INF/scripting-spring.xml,\
+    META-INF/search-spring.xml,\
+    META-INF/workflow-spring.xml,\
+    \
+    META-INF/counter-spring.xml,\
+    META-INF/mail-spring.xml,\
+    META-INF/portal-spring.xml,\
+    META-INF/portlet-container-spring.xml,\
+    META-INF/staging-spring.xml,\
+    META-INF/virtual-layouts-spring.xml,\
+    \
+    META-INF/dynamic-data-source-spring.xml,\
+    #META-INF/shard-data-source-spring.xml,\
+    #META-INF/memcached-spring.xml,\
+    #META-INF/monitoring-spring.xml,\
+    \
+    META-INF/ext-spring.xml
+
+last.modified.check=false
+
+browser.launcher.url=
+setup.wizard.enabled=false
+
+combo.check.timestamp=true
+
+freemarker.engine.cache.storage=soft:1
+freemarker.engine.modification.check.interval=0
+
+openoffice.cache.enabled=false
+
+velocity.engine.resource.manager.cache.enabled=false
+tags.compiler.enabled=false
+pt.impresa.liferay.content.search.ContentOpenSearch=true
+layout.friendly.url.page.not.found=/errors/404.jsp
+
+request.header.ignore.init.params=filter-class,url-regex-ignore-pattern
+
+jsonws.web.service.public.methods=*
+json.service.auth.token.enabled=false
+
+# Set the default language.
+user.country=pt_PT
+user.language=pt_PT
+locales=pt_PT,en_US
