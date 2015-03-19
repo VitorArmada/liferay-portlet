@@ -1,0 +1,1 @@
+create index IX_2ADEEC68 on NL_Subscription (email);

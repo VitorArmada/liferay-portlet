@@ -1,0 +1,10 @@
+## ---------- COMMON CUSTOM FIELDS ---------- ##
+#set ($cf_pageMenuClass = "pageMenuClass")
+
+## ---------- FOOTER CUSTOM FIELDS ---------- ##
+#set ($cf_footerMenu = "footerMenu")
+		#if ($layout.getExpandoBridge().hasAttribute($cf_footerMenu) == false)
+				 #set($VOID = $layout.getExpandoBridge().addAttribute($cf_footerMenu, 1, false))
+		#end
+#set ($cf_footerMenuClass = "footerMenuClass")
+#set ($cf_footerMenuParentLink = "footerMenuParentLink")

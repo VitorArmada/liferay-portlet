@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="pt.impresa.liferay.content.service.ImpresaContentLocalService" class="pt.impresa.liferay.content.service.impl.ImpresaContentLocalServiceImpl" />
+	<bean id="pt.impresa.liferay.content.service.ImpresaContentService" class="pt.impresa.liferay.content.service.impl.ImpresaContentServiceImpl" />
+	<bean id="empty" class="org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy">
+		<property name="targetDataSource">
+			<ref bean="liferayDataSource" />
+		</property>
+	</bean>
+</beans>
